@@ -1,0 +1,113 @@
+.main-menu {
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: 1024px) {
+        justify-content: flex-end;
+		align-items: center;
+    }
+    &__btn {
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        &--about path {
+            stroke: $main;
+        }
+        &:hover path {
+            stroke: rgba(240, 20, 90, 1);
+        }
+        &:active {
+            background-color: $grey-separator;
+            border-radius: 8px;
+            path {
+                stroke: $main;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+    &__list {
+        position: absolute;
+        right: -20px;
+        top: 0px;
+        min-width: 360px;
+        max-width: 748px;
+        list-style: none;
+        padding: 50px 12px 12px;
+        background-color: $white;
+        border-radius: 12px 12px 0 0;
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: none;
+            position: static;
+            width: auto;
+            background-color: transparent;
+        }
+    }
+    &__link {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        padding: 7px 0;
+        background-color: $grey-bg;
+        border-radius: 12px;
+        margin-top: 15px;
+        a {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: $active-regular;
+            text-decoration: none;
+            &:hover {
+                text-shadow: 0 1px 1px $accent;
+            }
+        }
+        &:active {
+            background-color: $grey-separator;
+        }
+        &--active {
+            color: $accent;
+        }
+    }
+    &--desktop {
+        display: none;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            height: 25px;
+        }
+    }
+    &__item {
+        @media screen and (min-width: 768px) {
+            font-weight: 700;
+            font-size: 16px;
+            color: $white;
+            margin-right: 15px;
+            text-decoration: none;
+            &--about {
+                color: rgba(36, 163, 255, 1);
+                &:not(.main-menu__item--active):hover {
+                    border-bottom: 2px solid $active-regular;
+                }
+            }
+            &--active {
+                color: $accent;
+                border-bottom: 2px solid $accent;
+            }
+            &:active {
+                color: $accent;
+                border-bottom: 2px solid $accent;
+            }
+            &:not(.main-menu__item--active):hover {
+                border-bottom: 2px solid $white;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            margin: 0 0 0 16px;
+            padding: 3px 0;
+        }
+    }
+
+}

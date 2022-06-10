@@ -1,0 +1,71 @@
+.about-achivements-back {
+    background-color: $grey-bg;
+    padding: 30px 0;
+    @media screen and (min-width: 1024px) {
+        padding: 33px 0 29px;
+    }
+}
+.about-achivements {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 90px max-content;
+    gap: 27px;
+    justify-items: center;
+    @media screen and (min-width: 1024px) {
+        grid-template-rows: max-content 110px max-content
+    }
+    &__logo:nth-last-child(-n+3) {
+        display: none;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        vertical-align: top;
+        letter-spacing: 1px;
+        color: $main;
+        text-transform: uppercase;
+    }
+    &__logos {
+        width: 100%;
+        padding: 0 30px;
+        @media screen and (min-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 90px;
+            gap: 40px;
+            padding: 0;
+        }
+    }
+    &__logo {
+        height: 90px;
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        padding: 25px 0;
+        @media screen and (min-width: 768px) {
+            &:nth-child(-n+4) {
+                display: flex;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            height: 110px;
+        }
+    }
+    &__img {
+        width: auto;
+        height: 40px;
+        @media screen and (min-width: 1024px) {
+            height: 60px;
+        }
+    }
+    &__slider {
+        margin-top: 3px;
+        .slider-button:nth-last-child(-n+3) {
+            display: none;
+        }
+    }
+
+}

@@ -1,0 +1,83 @@
+.about-idea {
+    @media screen and (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 54% 1fr;
+        grid-template-rows: max-content;
+        gap: 30px;
+        padding: 5px 60px 38px;
+        align-items: flex-start;
+    }
+    @media screen and (min-width: 1200px) {
+        grid-template-columns: 1fr 36%;
+        padding-top: 5px;
+    }
+    &__title {
+        background: $red-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 30px;
+        line-height: 37px;
+        font-weight: 700;
+        margin: 30px 0;
+        @media screen and (min-width: 768px) {
+            margin: 10px 0 26px;
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+    &__text {
+        font-size: 19px;
+        line-height: 30px;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+    &__proud {
+        border-left: 4px solid #E6E6F0;
+        padding-left: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, max-content);
+        gap: 40px;
+        margin: 28px 0 28px;
+        @media screen and (min-width: 768px) {
+            margin: 30px 0 58px;
+        }
+        @media screen and (min-width: 1024px) {
+            margin: 8px 0 0;
+        }
+    }
+    &__number {
+        font-size: 36px;
+        line-height: 44px;
+        background: $red-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 10px;
+        &--years::before {
+            content: url(../img/about-idea-flag.svg);
+            width: 23px;
+            height: 26px;
+            margin: 0 13px 0 3px;
+        }
+        &--clients::before {
+            content: url(../img/about-idea-case.svg);
+            width: 25px;
+            height: 21px;
+            margin: 0 12px 0 4px;
+        }
+        &--hours::before {
+            content: url(../img/about-idea-star.svg);
+            width: 25px;
+            height: 25px;
+            margin: 0 12px 0 2px;
+        }
+    }
+    &__explain {
+        font-size: 16px;
+        line-height: 20px;
+        color: $main;
+    }
+
+}

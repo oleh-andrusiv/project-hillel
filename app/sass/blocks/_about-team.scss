@@ -1,0 +1,57 @@
+.about-team {
+    padding: 29px 30px 30px;
+    @media screen and (min-width: 768px) {
+        padding: 60px 60px 32px;
+    }
+    @media screen and (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 54% 1fr;
+        grid-template-rows: max-content;
+        column-gap: 55px;
+        padding-bottom: 36px;
+    }
+    @media screen and (min-width: 1200px) {
+        grid-template-columns: 61% 1fr;
+    }
+    &__title {
+        background: $red-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 30px;
+        line-height: 37px;
+        font-weight: 700;
+        margin: 30px 0;
+        @media screen and (min-width: 768px) {
+            margin: 10px 0 26px;
+            font-size: 38px;
+            line-height: 46px;
+        }
+        @media screen and (min-width: 1024px) {
+            grid-area: 2/2/3/3;
+            margin: 0;
+        }
+    }
+    &__text {
+        font-size: 19px;
+        line-height: 30px;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+    &__img-box {
+        @media screen and (min-width: 1024px) {
+            margin-top: 60px;
+        }
+    }   
+    &__img {
+        width: 100%;
+    }
+    &__info {
+        @media screen and (min-width: 768px) {
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width: 1024px) {
+            grid-area: 2/1/3/2;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.team {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    @media screen and (min-width: 768px) {
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+    &__member {
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+    }
+    &__member-photo {
+        border-radius: 12px 12px 0 0;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        @media screen and (min-width: 1024px) {
+            height: 528px;
+            width: 44%;
+            display: inline-block;
+            border-radius: 12px 0 0 12px;
+        }
+    }
+    &__member-data {
+        background-color: $grey-bg;
+        padding: 31px 30px 30px;
+        border-radius: 0 0 12px 12px;
+        @media screen and (min-width: 1024px) {
+            border-radius: 0 12px 12px 0;
+            width: 56%;
+            height: 528px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &__member-data-title {
+        background: $red-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 30px;
+        line-height: 37px;
+        font-weight: 700;
+        margin-top: 6px;
+        word-break: break-word;
+        @media screen and (min-width: 768px) {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+    &__member-name {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $grey-text;
+        margin-top: 29px;
+    }
+    &__member-role {
+        font-size: 14px;
+        line-height: 22px;
+        color: $grey-text;
+        margin-top: 5px;
+    }
+    &__slider {
+        padding: 30px 0;
+        text-align: center;
+    }
+
+}
+.slider-button {
+    background-color: rgba(36, 163, 255, 0.2);
+    width: 16px;
+    height: 16px;
+    border: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 5px 0 5px;
+    &--active {
+        background-color: rgba(36, 163, 255, 1);
+    }
+    &:not(.team__slider-button--active):hover {
+        background-color: rgba(36, 163, 255, 0.6);
+    }
+}
